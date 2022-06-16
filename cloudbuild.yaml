@@ -13,7 +13,7 @@ steps:
     args:
       - push
       - gcr.io/$PROJECT_ID/my-app:$COMMIT_SHA
-   # gke deploy 
+   # gke deploy by useing gke-deploy
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
@@ -23,6 +23,4 @@ steps:
   - '--location'
   - 'us-central1-a'
   - '--cluster'
-  - 'gke-cloud-build'  
-  waitFor: ['push-image-to-container-registry']
-  id: 'deploy-to-cloud-kubrnetes'
+  - 'gke-cloud-build' 
