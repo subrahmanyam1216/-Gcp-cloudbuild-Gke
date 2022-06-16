@@ -34,8 +34,8 @@ spec:
       name: green-deploy
     spec: 
       containers: 
-        - 
-          image: gcr.io/cloud-build-poc-gke/version:73147c49972d1ee00b4ba21941cf8d5e66f4387b
+        - image: gcr.io/cloud-build-poc-gke/version:b0e2f19c434ac1013b4553e5651b848c5edc9beb
+          imagePullPolicy: IfNotPresent
           name: green-deploy
           ports: 
             - containerPort: 8080
