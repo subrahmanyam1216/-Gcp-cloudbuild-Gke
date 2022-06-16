@@ -7,10 +7,10 @@ spec:
   selector:
     app: frontend
   ports:
-    - targetPort: 80
-      port: 80
+    port: 80
+    protocol: TCP
+    targetPort: 8080
   type: LoadBalancer
-
 
 --- 
 apiVersion: apps/v1
